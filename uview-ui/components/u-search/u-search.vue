@@ -1,7 +1,5 @@
 <template>
-	<view class="u-search" @tap="clickHandler" :style="{
-		margin: margin,
-	}">
+	<view class="u-search" @tap="clickHandler">
 		<view
 			class="u-content"
 			:style="{
@@ -67,7 +65,6 @@
  * @property {String} color 输入框字体颜色（默认#606266）
  * @property {String} placeholder-color placeholder的颜色（默认#909399）
  * @property {String} search-icon 输入框左边的图标，可以为uView图标名称或图片路径
- * @property {String} margin 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"
  * @property {Boolean} animation 是否开启动画，见上方说明（默认false）
  * @property {String} value 输入框初始值
  * @property {String | Number} maxlength 输入框最大能输入的长度，-1为不限制长度
@@ -180,11 +177,6 @@ export default {
 		placeholderColor: {
 			type: String,
 			default: '#909399'
-		},
-		// 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法
-		margin: {
-			type: String,
-			default: '0'
 		},
 		// 左边输入框的图标，可以为uView图标名称或图片路径
 		searchIcon: {
@@ -307,7 +299,7 @@ export default {
 .u-input {
 	flex: 1;
 	font-size: 28rpx;
-	line-height: 1;
+	line-height: unset;
 	margin: 0 10rpx;
 	color: $u-tips-color;
 }
