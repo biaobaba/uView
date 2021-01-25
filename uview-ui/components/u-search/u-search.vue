@@ -1,7 +1,5 @@
 <template>
-	<view class="u-search" @tap="clickHandler" :style="{
-		margin: margin,
-	}">
+	<view class="u-search" @tap="clickHandler">
 		<view
 			class="u-content"
 			:style="{
@@ -307,7 +305,7 @@ export default {
 .u-input {
 	flex: 1;
 	font-size: 28rpx;
-	line-height: 1;
+	line-height: unset;
 	margin: 0 10rpx;
 	color: $u-tips-color;
 }
